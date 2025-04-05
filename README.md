@@ -1,8 +1,5 @@
 # renom
 
-[![Go CI](https://github.com/CHashtager/renom/actions/workflows/go-tests.yml/badge.svg)](https://github.com/CHashtager/renom/actions)
-
-
 A simple CLI tool to recursively rename files, directories, and replace text inside files.
 
 ## 🚀 Features
@@ -12,26 +9,34 @@ A simple CLI tool to recursively rename files, directories, and replace text ins
 
 ## 🛠️ Installation
 
-### **1️⃣ Clone the Repository**
+### **Option 1: Direct Installation with Go**
+You can install `renom` directly using Go:
+
+```bash
+go install github.com/CHashtager/renom/cmd/renom@latest
+```
+
+This will download, compile, and install the `renom` binary to your `$GOPATH/bin` directory, which should be in your PATH.
+
+### **Option 2: Manual Installation**
+#### **1️⃣ Clone the Repository**
 ```bash
 git clone https://github.com/CHashtager/renom.git
 cd renom
 ```
 
-### **2️⃣ Build the CLI**
+#### **2️⃣ Build the CLI**
 Compile the Go binary:
 ```bash
-go build -o renom ./main.go
+go build -o renom ./cmd/renom/main.go
 ```
 This will generate an executable file named `renom`.
 
----
-
-## 📌 Adding to PATH for Global Use
+#### 📌 Adding to PATH for Global Use
 
 To use `renom` from anywhere in the terminal, you need to add it to your system's **PATH**.
 
-### **🔹 Linux / macOS**
+##### **🔹 Linux / macOS**
 1. Move the binary to `/usr/local/bin`:
    ```bash
    sudo mv renom /usr/local/bin/
@@ -41,7 +46,7 @@ To use `renom` from anywhere in the terminal, you need to add it to your system'
    renom --help
    ```
 
-### **🔹 Windows**
+##### **🔹 Windows**
 1. Move `renom.exe` to a permanent location, e.g., `C:\renom\`
 2. Add this directory to the **system PATH**:
    - Open **Start Menu** → Search **"Environment Variables"** → Open **"Edit the system environment variables"**
